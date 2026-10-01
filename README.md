@@ -93,7 +93,7 @@ Weekly sell-through percentages calculated by store and SKU against opening stoc
 
 ## Files
 
-- `Retail_Allocation_Analysis.xlsx` — full Excel workbook with all 5 sheets
+- `Retail Allocation Project.xlsx` — full Excel workbook with all 5 sheets
 
 -----
 

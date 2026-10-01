@@ -1,4 +1,4 @@
-# Retail Allocation Analysis — Inverse Weeks of Supply Method
+# Retail Allocation Project — Inverse Weeks of Supply Method
 
 ## Overview
 

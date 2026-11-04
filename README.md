@@ -13,15 +13,15 @@ A fictional Canadian activewear brand launches the Flow Legging (3 colours, 5 si
 
 | | Finding | Action |
 |---|---|---|
-| 📦 | **[Store]** sold **[x%]** of its stock in 8 weeks, while **[store in the same region]** held **[x]** weeks of cover. | Moved **[x]** units from **[stores]** to **[stores]**. |
-| 🎨 | **[Colour]** sold through **[x%]**, **[colour]** only **[x%]**. | **[What you'd change in the next delivery.]** |
+| 📦 | **Montreal** sold **96%** of its stock in 8 weeks and has **half a week** left, while **Victoria** holds nearly **20 weeks** of cover. | **[From 4_Rebalance: what you moved, and from where.]** |
+| 🎨 | **Black** sold through **94%**, **Sage** only **63%**. Customers bought **49% Black** against a plan of **40%**. | Send the **539 Black** still in the warehouses to the fastest stores, and plan the next buy nearer **50 / 33 / 17**. |
 | 🌐 | Online ran out of **[sizes]** in week **[x]**, while **[x]** units sat in the Toronto warehouse. | **[What you'd do with the holdback.]** |
 
 **Recommendation:** **[Your one recommendation, with a number.]**
-<!-- PLACEHOLDER: replace every [bracket] with your own numbers from the workbook -->
+<!-- PLACEHOLDER: replace every [bracket] with your own numbers from the workbook (rows 1-2 done from 3_Health) -->
 
 ## Built in Excel
-Pivot tables · SUMIFS / AVERAGEIFS · INDEX / MATCH · IF / ROUND · conditional formatting · charts
+Pivot tables · SUMIFS / AVERAGEIF · INDEX / MATCH · IF / ROUND · conditional formatting · charts
 
 ---
 
@@ -32,7 +32,7 @@ As the allocation analyst, I had to answer:
 
 1. **Launch plan:** how many units each store and online get on day one, and how many stay at the warehouses.
 2. **Size curve:** how to split each store's units across XS to XL.
-3. **Health check:** sell-through, weeks of cover and in-stock %, by store, colour and size.
+3. **Health check:** sell-through and weeks of cover, by store and by colour.
 4. **Rebalance:** which stores send stock and which receive it.
 5. **Online:** what happened when online ran out first.
 6. **End of season:** what to pull together, and what to mark down.
@@ -58,7 +58,6 @@ Open it in Excel and start on `Start_Here`. Blue cells are inputs, amber cells a
 <details>
 <summary><b>1_Launch</b>: forecast and launch units by store</summary>
 
-
 ![1_Launch](images/1_launch.png)
 <!-- PLACEHOLDER: images/1_launch.png -->
 </details>
@@ -71,7 +70,7 @@ Open it in Excel and start on `Start_Here`. Blue cells are inputs, amber cells a
 </details>
 
 <details>
-<summary><b>3_Health</b>: sell-through and weeks of cover</summary>
+<summary><b>3_Health</b>: sell-through and weeks of cover, by store and by colour</summary>
 
 ![3_Health](images/3_health.png)
 <!-- PLACEHOLDER: images/3_health.png -->
@@ -103,7 +102,6 @@ Fictional data, made for this project, so anyone can open it and check the numbe
 
 ![Timeline: which data and tabs belong to before launch, weeks 1-8 and the end of season](images/timeline.png)
 
-
 | Table | What it holds |
 |---|---|
 | `Data_Locations` | 8 stores, online and 2 warehouses, with grade and region |
@@ -113,11 +111,9 @@ Fictional data, made for this project, so anyone can open it and check the numbe
 | `Data_Sales` | Units sold, sales and returns by week, location and SKU (weeks 1 to 8) |
 | `Data_Inventory` | Units received, stock on hand, in transit and on order, each week |
 
-
 ## Metrics used
 - **Sell-through** = units sold ÷ units received
 - **Weeks of cover** = stock on hand ÷ average weekly sales
-- **In-stock %** = SKUs in stock ÷ SKUs ranged
 - **Extra stock** = stock on hand − weekly sales × weeks left
 
 ## Repo layout

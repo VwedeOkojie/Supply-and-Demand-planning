@@ -1,103 +1,124 @@
-# Retail Allocation Project — Inverse Weeks of Supply Method
+# Northline Activewear: Launch & In-Season Allocation (Excel)
 
-## Overview
+**How should 6,000 units of a new product be split across 8 stores, online and 2 warehouses, and what should move once sales come in?**
 
-This project simulates a real-world retail inventory allocation decision across 6 store locations and 3 SKUs over an 8-week period. Built entirely in Excel, it demonstrates the end-to-end allocation workflow used by planning and allocation analysts in retail and supply chain environments.
+A fictional Canadian activewear brand launches the Flow Legging (3 colours, 5 sizes) with no sales history. In one Excel workbook, I planned the launch allocation, built the size curve, tracked weeks 1 to 8, rebalanced stock between stores, and planned the end of season.
 
------
+![Monday report dashboard](images/dashboard.png)
+<!-- PLACEHOLDER: images/dashboard.png = screenshot of the Dashboard tab, after you add the charts and recommendation -->
 
-## Business Problem
+📥 **[Download the workbook](northline_allocation.xlsx)** (click it, then the download button on the right) and open it in Excel. Start on the `Start_Here` tab.
 
-A warehouse has incoming shipments to distribute across 6 Ontario stores. Some stores are critically low on stock. Some are already well supplied. The goal is to allocate available units where they are most needed — preventing stockouts at high-velocity stores while avoiding over-allocation to stores that are already healthy.
+## Key findings
 
------
+| | Finding | Action |
+|---|---|---|
+| 📦 | **[Store]** sold **[x%]** of its stock in 8 weeks, while **[store in the same region]** held **[x]** weeks of cover. | Moved **[x]** units from **[stores]** to **[stores]**. |
+| 🎨 | **[Colour]** sold through **[x%]**, **[colour]** only **[x%]**. | **[What you'd change in the next delivery.]** |
+| 🌐 | Online ran out of **[sizes]** in week **[x]**, while **[x]** units sat in the Toronto warehouse. | **[What you'd do with the holdback.]** |
 
-## Methodology
+**Recommendation:** **[Your one recommendation, with a number.]**
+<!-- PLACEHOLDER: replace every [bracket] with your own numbers from the workbook -->
 
-### Step 1 — Sales History Analysis
+## Built in Excel
+Pivot tables · SUMIFS / AVERAGEIFS · INDEX / MATCH · IF / ROUND · conditional formatting · charts
 
-8 weeks of weekly sales data across 6 stores and 3 SKUs with seasonal variation built in. Weeks 4 and 5 reflect mid-quarter demand peaks. Store velocity varies — Toronto is the highest volume store, Scarborough the lowest.
+---
 
-### Step 2 — Inventory Health Assessment
+## The story
+Northline has 8 stores across Canada (graded A, B and C), an online store, and two warehouses: Toronto serves the East and online, and Vancouver serves the West. On 3 March 2025 it launched the Flow Legging to replace the Core Legging. The buyers bought 6,000 units and expect the Flow to sell 20% more than the Core did. 70% went out at launch, and 30% was held at the warehouses. It's now the end of week 8 of a 12-week season.
 
-Current inventory levels assessed against weeks of supply thresholds:
+As the allocation analyst, I had to answer:
 
-|Status  |Threshold    |Meaning          |
-|--------|-------------|-----------------|
-|Critical|Below 1 week |Stockout imminent|
-|Low     |Below 2 weeks|At reorder point |
-|Healthy |Above 3 weeks|No action needed |
+1. **Launch plan:** how many units each store and online get on day one, and how many stay at the warehouses.
+2. **Size curve:** how to split each store's units across XS to XL.
+3. **Health check:** sell-through, weeks of cover and in-stock %, by store, colour and size.
+4. **Rebalance:** which stores send stock and which receive it.
+5. **Online:** what happened when online ran out first.
+6. **End of season:** what to pull together, and what to mark down.
 
-Reorder points and safety stock calculated using:
+## The workbook: `northline_allocation.xlsx`
 
-- Supplier lead time: 2 weeks
-- Safety stock buffer: 1 week
-- Reorder trigger: 3 weeks of supply
+Open it in Excel and start on `Start_Here`. Blue cells are inputs, amber cells are my analysis.
 
-### Step 3 — Allocation Calculator — Inverse WOS Method
+<details>
+<summary><b>Start_Here</b>: the cover page</summary>
 
-Stores ranked by urgency using inverse weeks of supply. Stores with less supply get a higher urgency score and a larger share of available units.
+![Start_Here](<img width="1085" height="643" alt="image" src="https://github.com/user-attachments/assets/aec92115-1268-4479-933b-db487631fbb9" />
+)
+<!-- PLACEHOLDER: images/start_here.png -->
+</details>
 
-**Three refinements applied:**
+<details>
+<summary><b>Assumptions</b>: the inputs every formula uses</summary>
 
-1. Stores above the healthy WOS threshold (3 weeks) are excluded from allocation entirely
-1. Each store’s allocation is capped at the units needed to reach exactly 3 weeks of supply
-1. Leftover units after capping are redistributed equally among stores that received allocation
+![Assumptions](images/assumptions.png)
+<!-- PLACEHOLDER: images/assumptions.png -->
+</details>
 
-**Allocation formula:**
+<details>
+<summary><b>1_Launch</b>: forecast and launch units by store</summary>
 
+![1_Launch](images/1_launch.png)
+<!-- PLACEHOLDER: images/1_launch.png -->
+</details>
+
+<details>
+<summary><b>2_Sizes</b>: the size curve</summary>
+
+![2_Sizes](images/2_sizes.png)
+<!-- PLACEHOLDER: images/2_sizes.png -->
+</details>
+
+<details>
+<summary><b>3_Health</b>: sell-through and weeks of cover</summary>
+
+![3_Health](images/3_health.png)
+<!-- PLACEHOLDER: images/3_health.png -->
+</details>
+
+<details>
+<summary><b>4_Rebalance</b>: which stores send and which receive</summary>
+
+![4_Rebalance](images/4_rebalance.png)
+<!-- PLACEHOLDER: images/4_rebalance.png -->
+</details>
+
+<details>
+<summary><b>5_Online</b>: when online ran out</summary>
+
+![5_Online](images/5_online.png)
+<!-- PLACEHOLDER: images/5_online.png -->
+</details>
+
+<details>
+<summary><b>6_EndOfSeason</b>: extra stock and markdowns</summary>
+
+![6_EndOfSeason](images/6_end_of_season.png)
+<!-- PLACEHOLDER: images/6_end_of_season.png -->
+</details>
+
+## Data
+Fictional data, made for this project, so anyone can open it and check the numbers.
+
+| Table | What it holds |
+|---|---|
+| `Data_Locations` | 8 stores, online and 2 warehouses, with grade and region |
+| `Data_Products` | 15 Flow SKUs (colour × size) and the Core like item |
+| `Data_LikeItem` | The Core Legging's last 12 weeks, by location |
+| `Data_Sizes` | The Core Legging's sales by size |
+| `Data_Sales` | Units sold, sales and returns by week, location and SKU (weeks 1 to 8) |
+| `Data_Inventory` | Units received, stock on hand, in transit and on order, each week |
+
+## Metrics used
+- **Sell-through** = units sold ÷ units received
+- **Weeks of cover** = stock on hand ÷ average weekly sales
+- **In-stock %** = SKUs in stock ÷ SKUs ranged
+- **Extra stock** = stock on hand − weekly sales × weeks left
+
+## Repo layout
 ```
-Inverse WOS = 1 ÷ Weeks of Supply
-% Share = Store Inverse WOS ÷ SUM(eligible stores Inverse WOS)
-Recommended Units = MIN(Units Needed to reach 3 WOS, % Share × Available Units)
+northline_allocation.xlsx   the whole project
+images/                     dashboard.png and a screenshot of each tab
+README.md
 ```
-
-### Step 4 — Supply Gap Analysis
-
-Stores still insufficient after allocation are flagged with the exact units needed in the next purchase order recommendation.
-
-### Step 5 — Sell-Through Analysis
-
-Weekly sell-through percentages calculated by store and SKU against opening stock. Opening stock intentionally misaligned to show realistic variation — some stores under-bought, some over-bought.
-
------
-
-## Key Findings
-
-- **Toronto (Store 1)** was critically low across all three SKUs with less than 0.1 weeks of supply — received the highest allocation priority
-- **Scarborough (Store 6)** was already at healthy WOS levels and received zero allocation
-- Incoming shipments were sufficient to bring all needy stores to approximately **3.0 weeks of supply** after cap and redistribute logic was applied
-- Sell-through analysis revealed Toronto was **under-bought** at the start of the quarter while Mississauga and Scarborough were **over-bought** — suggesting a rebalancing of the opening buy for the next quarter
-
------
-
-## Tools Used
-
-- Microsoft Excel — SUMIFS, COUNTIF, IFERROR, MIN, MAX, conditional formatting
-- Power Query — data transformation
-- GitHub — version control and portfolio hosting
-
------
-
-## Sheets
-
-|Sheet                    |Description                                                                                    |
-|-------------------------|-----------------------------------------------------------------------------------------------|
-|Assumptions              |All input parameters — lead time, safety stock, WOS thresholds, incoming shipment quantities   |
-|Sales History            |8 weeks of weekly sales by store and SKU with totals and averages                              |
-|Inventory & Replenishment|Current inventory, weeks of supply, reorder points, safety stock, status flags                 |
-|Allocation Calculator    |Inverse WOS weighting, cap and redistribute logic, supply gap flags, next order recommendations|
-|Sell-Through Analysis    |Weekly sell-through % by store and SKU against opening stock                                   |
-
------
-
-## Files
-
-- `Retail Allocation Project.xlsx` — full Excel workbook with all 5 sheets
-
------
-
-## Author
-
-**Vwede Okojie**
-[github.com/VwedeOkojie](https://github.com/VwedeOkojie)

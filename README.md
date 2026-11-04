@@ -58,6 +58,7 @@ Open it in Excel and start on `Start_Here`. Blue cells are inputs, amber cells a
 <details>
 <summary><b>1_Launch</b>: forecast and launch units by store</summary>
 
+
 ![Timeline: which data and tabs belong to before launch, weeks 1-8 and the end of season](images/timeline.png)
 
 

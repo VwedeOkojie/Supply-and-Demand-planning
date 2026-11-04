@@ -5,7 +5,7 @@
 A fictional Canadian activewear brand launches the Flow Legging (3 colours, 5 sizes) with no sales history. In one Excel workbook, I planned the launch allocation, built the size curve, tracked weeks 1 to 8, rebalanced stock between stores, and planned the end of season.
 
 ![Monday report dashboard](images/dashboard.png)
-<!-- PLACEHOLDER: images/dashboard.png = screenshot of the Dashboard tab, after you add the charts and recommendation -->
+<!-- PLACEHOLDER: images/dashboard.png = Dashboard from A1 to the charts, without the pivot table -->
 
 📥 **[Download the workbook](northline_allocation.xlsx)** (click it, then the download button on the right) and open it in Excel. Start on the `Start_Here` tab.
 
@@ -38,7 +38,7 @@ As the allocation analyst, I had to answer:
 
 ## The workbook: `northline_allocation.xlsx`
 
-Open it in Excel and start on `Start_Here`. Blue cells are inputs, amber cells are my analysis.
+Open it in Excel and start on `Start_Here`. Blue cells are inputs, amber cells are my analysis. The `Dashboard` is the one-page Monday report: six KPIs, three charts, a pivot table and the recommendation.
 
 <details>
 <summary><b>Start_Here</b>: the cover page</summary>
@@ -107,8 +107,8 @@ Fictional data, made for this project, so anyone can open it and check the numbe
 | `Data_Products` | 15 Flow SKUs (colour × size) and the Core like item |
 | `Data_LikeItem` | The Core Legging's last 12 weeks, by location |
 | `Data_Sizes` | The Core Legging's sales by size |
-| `Data_Sales` | Units sold, sales and returns by week, location and SKU (weeks 1 to 8) |
-| `Data_Inventory` | Units received, stock on hand, in transit and on order, each week |
+| `Data_Sales` | Units sold, sales and returns by week, location and SKU (weeks 1 to 8), plus a colour column looked up from `Data_Products` |
+| `Data_Inventory` | Units received, stock on hand, in transit and on order, each week, plus the same colour column |
 
 ## Metrics used
 - **Sell-through** = units sold ÷ units received

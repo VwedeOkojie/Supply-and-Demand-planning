@@ -99,7 +99,7 @@ Open it in Excel and start on `Start_Here`. Blue cells are inputs, amber cells a
 ## Data
 Fictional data, made for this project, so anyone can open it and check the numbers.
 
-![Timeline: which data and tabs belong to before launch, weeks 1-8 and the end of season](images/timeline.png)
+![Timeline: which data and tabs belong to before launch, weeks 1-8 and the end of season](timeline.png)
 
 | Table | What it holds |
 |---|---|

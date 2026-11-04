@@ -44,7 +44,7 @@ Open it in Excel and start on `Start_Here`. Blue cells are inputs, amber cells a
 <details>
 <summary><b>Start_Here</b>: the cover page</summary>
 
-![Start_Here](Start Here.png)
+![Start_Here](images/start_here.png)
 <!-- PLACEHOLDER: images/start_here.png -->
 </details>
 

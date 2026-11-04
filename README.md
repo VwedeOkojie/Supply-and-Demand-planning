@@ -17,8 +17,7 @@ A fictional Canadian activewear brand launches the Flow Legging (3 colours, 5 si
 | 🎨 | **Black** sold through **94%**, **Sage** only **63%**. Customers bought **49% Black** against a plan of **40%**. | Send the **539 Black** still in the warehouses to the fastest stores, and plan the next buy nearer **50 / 33 / 17**. |
 | 🌐 | Online ran out of **11 of its 15** sizes and colours by week **8** (in-stock **27%**), while **995** units sat in the Toronto warehouse from week 2 on. | Top up online from the Toronto DC **every week**, not once, so the holdback follows demand. |
 
-**Recommendation:** **[Your one recommendation, with a number.]**
-<!-- PLACEHOLDER: the recommendation comes from 6_EndOfSeason and the Dashboard -->
+**Recommendation:** Release the warehouse holdback now, Black first, and push the **900-unit Black reorder** to next season. Even then, about **1,100 Navy and Sage** (**$108,000** at full price) won't sell in the last 4 weeks, so start markdowns from week 10, and plan the next buy nearer **50 / 33 / 17**.
 
 ## Built in Excel
 Pivot tables · SUMIFS / AVERAGEIF · INDEX / MATCH · IF / ROUND · conditional formatting · charts
@@ -91,7 +90,7 @@ Open it in Excel and start on `Start_Here`. Blue cells are inputs, amber cells a
 </details>
 
 <details>
-<summary><b>6_EndOfSeason</b>: extra stock and markdowns</summary>
+<summary><b>6_EndOfSeason</b>: extra stock by store, and by colour with the warehouses</summary>
 
 ![6_EndOfSeason](images/6_end_of_season.png)
 <!-- PLACEHOLDER: images/6_end_of_season.png -->

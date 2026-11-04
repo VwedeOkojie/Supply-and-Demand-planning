@@ -4,7 +4,7 @@
 
 A fictional Canadian activewear brand launches the Flow Legging (3 colours, 5 sizes) with no sales history. In one Excel workbook, I planned the launch allocation, built the size curve, tracked weeks 1 to 8, rebalanced stock between stores, and planned the end of season.
 
-![Monday report dashboard](dashboard.png)
+![Monday report dashboard](images/dashboard.png)
 <!-- PLACEHOLDER: images/dashboard.png = Dashboard from A1 to the charts, without the pivot table -->
 
 📥 **[Download the workbook](northline_allocation.xlsx)** (click it, then the download button on the right) and open it in Excel. Start on the `Start_Here` tab.
@@ -43,56 +43,56 @@ Open it in Excel and start on `Start_Here`. Blue cells are inputs, amber cells a
 <details>
 <summary><b>Start_Here</b>: the cover page</summary>
 
-![Start_Here](start_here.png)
+![Start_Here](images/start_here.png)
 <!-- PLACEHOLDER: images/start_here.png -->
 </details>
 
 <details>
 <summary><b>Assumptions</b>: the inputs every formula uses</summary>
 
-![Assumptions](assumptions.png)
+![Assumptions](images/assumptions.png)
 <!-- PLACEHOLDER: images/assumptions.png -->
 </details>
 
 <details>
 <summary><b>1_Launch</b>: forecast and launch units by store</summary>
 
-![1_Launch](1_launch.png)
+![1_Launch](images/1_launch.png)
 <!-- PLACEHOLDER: images/1_launch.png -->
 </details>
 
 <details>
 <summary><b>2_Sizes</b>: the size curve</summary>
 
-![2_Sizes](2_sizes.png)
+![2_Sizes](images/2_sizes.png)
 <!-- PLACEHOLDER: images/2_sizes.png -->
 </details>
 
 <details>
 <summary><b>3_Health</b>: sell-through and weeks of cover, by store and by colour</summary>
 
-![3_Health](3_health.png)
+![3_Health](images/3_health.png)
 <!-- PLACEHOLDER: images/3_health.png -->
 </details>
 
 <details>
 <summary><b>4_Rebalance</b>: which stores send and which receive</summary>
 
-![4_Rebalance](4_rebalance.png)
+![4_Rebalance](images/4_rebalance.png)
 <!-- PLACEHOLDER: images/4_rebalance.png -->
 </details>
 
 <details>
 <summary><b>5_Online</b>: when online ran out, and in-stock % week by week</summary>
 
-![5_Online](5_online.png)
+![5_Online](images/5_online.png)
 <!-- PLACEHOLDER: images/5_online.png -->
 </details>
 
 <details>
 <summary><b>6_EndOfSeason</b>: extra stock by store, and by colour with the warehouses</summary>
 
-![6_EndOfSeason](6_end_of_season.png)
+![6_EndOfSeason](images/6_end_of_season.png)
 <!-- PLACEHOLDER: images/6_end_of_season.png -->
 </details>
 

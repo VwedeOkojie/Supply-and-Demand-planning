@@ -13,12 +13,12 @@ A fictional Canadian activewear brand launches the Flow Legging (3 colours, 5 si
 
 | | Finding | Action |
 |---|---|---|
-| 📦 | **Montreal** sold **96%** of its stock in 8 weeks and has **half a week** left, while **Victoria** holds nearly **20 weeks** of cover. | **[From 4_Rebalance: what you moved, and from where.]** |
+| 📦 | **Montreal** sold **96%** of its stock in 8 weeks and has **half a week** left, while **Victoria** holds nearly **20 weeks** of cover. | Moved **76** units from **Ottawa and Halifax** to **Montreal** (East) and **90** from **Victoria** to **Vancouver and Edmonton** (West). Moves stay inside each region. |
 | 🎨 | **Black** sold through **94%**, **Sage** only **63%**. Customers bought **49% Black** against a plan of **40%**. | Send the **539 Black** still in the warehouses to the fastest stores, and plan the next buy nearer **50 / 33 / 17**. |
-| 🌐 | Online ran out of **[sizes]** in week **[x]**, while **[x]** units sat in the Toronto warehouse. | **[What you'd do with the holdback.]** |
+| 🌐 | Online ran out of **11 of its 15** sizes and colours by week **8** (in-stock **27%**), while **995** units sat in the Toronto warehouse from week 2 on. | Top up online from the Toronto DC **every week**, not once, so the holdback follows demand. |
 
 **Recommendation:** **[Your one recommendation, with a number.]**
-<!-- PLACEHOLDER: replace every [bracket] with your own numbers from the workbook (rows 1-2 done from 3_Health) -->
+<!-- PLACEHOLDER: the recommendation comes from 6_EndOfSeason and the Dashboard -->
 
 ## Built in Excel
 Pivot tables · SUMIFS / AVERAGEIF · INDEX / MATCH · IF / ROUND · conditional formatting · charts
@@ -84,7 +84,7 @@ Open it in Excel and start on `Start_Here`. Blue cells are inputs, amber cells a
 </details>
 
 <details>
-<summary><b>5_Online</b>: when online ran out</summary>
+<summary><b>5_Online</b>: when online ran out, and in-stock % week by week</summary>
 
 ![5_Online](images/5_online.png)
 <!-- PLACEHOLDER: images/5_online.png -->
@@ -114,6 +114,7 @@ Fictional data, made for this project, so anyone can open it and check the numbe
 ## Metrics used
 - **Sell-through** = units sold ÷ units received
 - **Weeks of cover** = stock on hand ÷ average weekly sales
+- **In-stock %** = SKUs with stock ÷ SKUs ranged (15 for online)
 - **Extra stock** = stock on hand − weekly sales × weeks left
 
 ## Repo layout
